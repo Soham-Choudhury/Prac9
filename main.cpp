@@ -16,13 +16,13 @@ int main (){
     vector<string> list;
     string input;
     //input="* - 5 6 7"; //variable to hold input as string
-    input="* 5"; //variable to hold input as string
+    //input="* 5"; //variable to hold input as string
     //input="* - 5 6 7"; //variable to hold input as string
     string target=" "; //variable holding the target to aim for the space to differentiate between different ints
     string hold=""; //variable and temp hold space
     string funcinput;
     int targetfound;
-    //getline (cin >> ws,input); //taking input including spaces
+    getline (cin >> ws,input); //taking input including spaces
     string input2=input;
     int sizeofin=input.size();
     for (int z=0; z<sizeofin;z++){ //taking input line and putting integers in vector
