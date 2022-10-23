@@ -23,7 +23,7 @@ string Prefix::prefix(string input, vector<string> list, int firstint){
     for (int i=firstint; i<sizelist;i++){
         hold=list.at(i);
         hold2=stoi(hold);
-        if (hold2<0){
+        if (hold2<0 || hold2>99){
             output="Error";
             cout<<output<<endl;
             return output;
