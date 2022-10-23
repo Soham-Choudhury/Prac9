@@ -13,11 +13,21 @@ string Prefix::prefix(string input, vector<string> list, int firstint){
     int oper1=0;
     int oper2=0;
     string hold;
+    int hold2;
     string output;
     if (sizelist-(firstint+1)!=firstint){
         output="Error";
         cout<<output<<endl;
         return output;
+    }
+    for (int i=firstint; i<sizelist;i++){
+        hold=list.at(i);
+        hold2=stoi(hold);
+        if (hold2<0){
+            output="Error";
+            cout<<output<<endl;
+            return output;
+        }
     }
     for (int i=size-1; i>= 0; i--) {
         //test input is "* - 5 6 7";

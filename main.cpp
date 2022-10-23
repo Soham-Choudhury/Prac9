@@ -15,7 +15,7 @@ void print(vector<string> input){
 int main (){  
     vector<string> list;
     string input;
-    //input="* - 5 6 7"; //variable to hold input as string
+    //input="* - 5 6 -7"; //variable to hold input as string
     //input="* 5"; //variable to hold input as string
     //input="* - 5 6 7"; //variable to hold input as string
     string target=" "; //variable holding the target to aim for the space to differentiate between different ints
