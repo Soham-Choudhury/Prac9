@@ -15,15 +15,32 @@ string Prefix::prefix(string input, vector<string> list, int firstint){
     string hold;
     int hold2;
     string output;
-    if (sizelist-(firstint+1)!=firstint){
+    if (sizelist-(firstint+1)!=firstint){ //checking if operators and operands are the right ratio
         output="Error";
         cout<<output<<endl;
         return output;
     }
+    if (firstint==0){ //checking if first integer is at 0
+        output="Error";
+        cout<<output<<endl;
+        return output;
+    }
+    for (int i=0;i<size;i++){
+        if (input.at(i)!='1' && input.at(i)!='2' && input.at(i)!='3' && input.at(i)!='4' && input.at(i)!='5' && input.at(i)!='6' && input.at(i)!='7' && input.at(i)!='8' && input.at(i)!='9' && input.at(i)!='0' && input.at(i)!='+' && input.at(i)!='*' && input.at(i)!='-' && input.at(i)!='/'){
+            output="Error";
+            cout<<output<<endl;
+            return output;
+        }
+    }
     for (int i=firstint; i<sizelist;i++){
         hold=list.at(i);
+        if (hold=="+" || hold=="*" || hold=="-" || hold=="/"){ //checking if any operands after first integer
+            output="Error";
+            cout<<output<<endl;
+            return output;
+        }
         hold2=stoi(hold);
-        if (hold2<0 || hold2>99){
+        if (hold2<0 || hold2>99){ //checking if operands are within 0 and 99
             output="Error";
             cout<<output<<endl;
             return output;
@@ -58,6 +75,11 @@ string Prefix::prefix(string input, vector<string> list, int firstint){
             }
             else if(list.at(firstint-z-1)=="/"){
                 //cout<<"using /"<<endl;
+                if (oper2==0){
+                    output="Error";
+                    cout<<output<<endl;
+                    return output;
+                }
                 oper1=oper1 / oper2;
             }
         }

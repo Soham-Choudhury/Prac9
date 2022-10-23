@@ -18,6 +18,8 @@ int main (){
     //input="* - 5 6 -7"; //variable to hold input as string
     //input="* 5"; //variable to hold input as string
     //input="* - 5 6 7"; //variable to hold input as string
+    //input= "2 : 2";
+    //input="/ 2 0 :";
     string target=" "; //variable holding the target to aim for the space to differentiate between different ints
     string hold=""; //variable and temp hold space
     string funcinput;
